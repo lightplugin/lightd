@@ -312,6 +312,12 @@ func analysisField(jsonField, field string, i interface{}, tags []string) (dFiel
 				}
 			}
 		}
+	case bool:
+		if v {
+			tv = "true"
+		} else {
+			tv = "false"
+		}
 	default:
 		err = errors.New("类型解析出错")
 		return
