@@ -266,7 +266,7 @@ func analysisField(jsonField, field string, i interface{}, tags []string) (dFiel
 			tv = `""`
 		} else {
 			if attrs["edge"] {
-				tv = fmt.Sprintf(`{uid:"%s"}`, v)
+				tv = fmt.Sprintf(`{"uid":"%s"}`, v)
 				edge = &DField{
 					Key:   jsonField,
 					Value: tv,
